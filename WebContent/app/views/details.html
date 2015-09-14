@@ -1,0 +1,7 @@
+<h1><span class="label label-info">{{car.marque | uppercase}} {{car.nom}} {{car.serie}}</span></h1>
+<br>
+<span class="label label-primary">0 a 100 :</span>{{car.acc_0_100}}
+<hr>
+<ul ng-repeat="car in cars">
+            <li class="label label-default">{{car.marque | uppercase}} {{car.nom}} {{car.serie}}</li>
+        </ul>

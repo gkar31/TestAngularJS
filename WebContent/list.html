@@ -1,0 +1,15 @@
+<h1>Test : {{helloMsg}}</h1>
+        <br>
+        <br>
+        
+        <a href="#/cars/{{$index}}" ng-repeat="car in cars">
+        	<h3>
+        		<span style="margin:2px 5px 2em 0;" class="label label-primary col-xs-6 col-lg-3" ng-click="loadCar($index)" >{{car.marque | uppercase}} {{car.nom}} {{car.serie}}&nbsp;&nbsp;</span>
+        	</h3>
+        </a>
+        
+<!--         <ul ng-repeat="car in cars"> -->
+<!--             <a href="#/cars/{{$index}}"><li class="label label-default" ng-click="loadCar($index)">{{car.marque | uppercase}} {{car.nom}} {{car.serie}}</li></a> -->
+<!--         </ul> -->
+        
+       

@@ -1,0 +1,39 @@
+<div class="col-lg-12">
+	<span class="row">
+	<h2><span class="label label-info col-lg-6">Match &nbsp; &nbsp;</span></h2>&nbsp; &nbsp;
+	<img src="http://img3.wikia.nocookie.net/__cb20130726030355/creepypasta/images/4/4d/Mmfp_0809_01_z_shelby_mustang_gt500_drag_race.jpg">
+	</span>
+</div>
+<br>
+<br>
+<div class="container-fluid">
+	<label for="v1">Voiture1</label>
+	<input id="v1" name="v1" type="text" ng-model="car1" typeahead="scar for scar in selectedcars1() | filter:$viewValue" class="form-control col-lg-6" placeholder="Voiture #1">
+	<br>
+	<br>
+	<span class="label label-danger col-lg-4 col-offset-6 centered">Face à</span>
+	<br>
+	<br>
+	<label>Voiture2</label>
+	
+	<input type="text" ng-model="car2" typeahead="scar for scar in selectedcars2() | filter:$viewValue" class="form-control" placeholder="Voiture #2">
+	<br>
+	 <button type="button" class="btn btn-primary" ng-click="match()" >Match !</button>
+	 <br>
+	 <br>
+	 
+	 <div ng-show="matchresult.c1o1 > 0">
+	 <table class="table">
+	 <tr>
+	 	<td><span class="label label-danger">{{ocar1.marque | uppercase}} {{ocar1.nom}} {{ocar1.serie}}</span></td>
+	 	<td> <b>VS</b></td>
+	 	<td> <span class="label label-danger label-lg">{{ocar2.marque | uppercase}} {{ocar2.nom}} {{ocar2.serie}}</span></td>
+	 	
+	 	<tr>
+	 		<td><span ng-class="{'label label-default': matchresult.c1o1 < 100, 'label label-danger': matchresult.c1o1 > 0}"><span ng-class="{'glyphicon glyphicon-remove': matchresult.c1o1<100, 'glyphicon glyphicon-ok': matchresult.c1o1>0}" aria-hidden="true"></span></span></td>
+	 		<td><b>{{matchresult.c1}}</b></td>
+	 		<td><span ng-class="{'label label-default': matchresult.c1o2 < 100, 'label label-info': matchresult.c1o2 > 0}"><span ng-class="{'glyphicon glyphicon-remove': matchresult.c1o2<100, 'glyphicon glyphicon-ok': matchresult.c1o2>0}" aria-hidden="true"></span></span></td>
+	 	</tr>
+	 	</table>
+	</div>	 		
+</div>
